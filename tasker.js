@@ -7,18 +7,14 @@ let date = new Date(Date.now());
 let curYear = date.getFullYear();
 let curMonth = date.getMonth();
 let curDate = date.getDate();
-let todayMs = date.getTime();
-let daysLeft;
-let startMs;
+todayms = date.getTime();
 
 if(curDate >= dateStarting)
 { //currently in new cycle, this cycle restarts next month on the third
-	startMs = new Date(curYear, curMonth, 03).getTime();
+	startms = new Date(curYear, curMonth, 03).getTime();
 }
 
 if(curDate < dateStarting)
 { //currently in new month but old cycle, it restarts on the 3rd
-	startMs = new Date(curYear - (curMonth > 0 ? 0 : 1), curMonth - (curMonth > 0 ? 1 : -11), dateStarting).getTime();
+	startms = new Date(curYear - (curMonth > 0 ? 0 : 1), curMonth - (curMonth > 0 ? 1 : -11), dateStarting).getTime();
 }
-
-console.log(new Date(startMs) + " - " + new Date(todayMs));
