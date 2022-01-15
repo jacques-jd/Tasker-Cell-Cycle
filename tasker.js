@@ -7,7 +7,8 @@ let date = new Date(Date.now());
 let curYear = date.getFullYear();
 let curMonth = date.getMonth();
 let curDate = date.getDate();
-todayms = date.getTime();
+let todayms = date.getTime();
+let startms;
 
 if(curDate >= dateStarting)
 { //currently in new cycle, this cycle restarts next month on the third
